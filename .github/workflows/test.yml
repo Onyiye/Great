@@ -1,0 +1,24 @@
+name: Testing GA
+on: push
+
+jobs:
+  GetVersions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get git version
+        run: git --version
+
+      - name: Get Node version
+        run: node --version
+
+      - name: Get Java version
+        run: java -version
+
+  CopyFiles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create directories
+        run: mkdir -p "$HOME/myfiles"
+
+      - name: Get files
+        run: wget -P "$HOME/myfiles" https://example.com/file.tar.gz
