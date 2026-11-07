@@ -21,4 +21,4 @@ jobs:
         run: mkdir -p "$HOME/myfiles"
 
       - name: Get files
-        run: wget -P "$HOME/myfiles" https://example.com/file.tar.gz
+        run: wget -P "$HOME/myfiles" https://downloads.apache.org/aries/blueprint-maven-plugin-1.1.0-source-release.zip
