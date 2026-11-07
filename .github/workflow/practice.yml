@@ -1,1 +1,27 @@
+name: Testing GA
+On: push
+
+job1:
+    GetVersions:
+        run-on: ubuntu-latest
+        steps:
+            name: GetgitVersion
+            run: git Version
+
+            name: GetNodeVersion
+            run: node version
+
+            name: GetJavaVersion
+            run: java version
+
+ Job2:
+      CopyFiles:
+      run-on: ubuntu-latest
+      steps:
+          name: CreateDirectories
+          run: mkdir/root/myfiles
+
+          name: GetFiles
+          run: Wget httpd
+          
 
